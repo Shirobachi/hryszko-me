@@ -1,0 +1,150 @@
+body
+{
+	background-color: #222f38;
+	color: #EEE;
+}
+
+#container
+{
+	width: 400px;
+	margin-left: auto;
+	margin-right: auto;
+	/*border: 1px solid cyan;*/
+}
+
+#hi
+{
+	font-weight: 800;				
+	text-align: center;
+	/*border: 1px solid cyan;*/
+	margin-top: 100px;
+	letter-spacing: 5px;
+	font-size: 36px;
+}
+
+#subtitle
+{
+	font-size: 16px;
+	text-align: center;
+}
+
+#lang
+{
+	display: inline-block;
+}
+
+#love
+{
+	font-weight: 800;
+}
+
+#hobby
+{
+	margin-top: 50px;
+	font-size: 24px;
+	text-align: center;
+}
+
+#loveThink
+{
+	display: inline-block;
+}
+
+#grapth
+{
+	margin-left: auto;
+	margin-right: auto;
+	width: 200px;
+}
+
+#bl
+{
+	left: 10px;
+}
+
+#br
+{
+	right: 10px;
+}
+
+.hoverGrapth
+{
+	bottom: 10px;
+	display: block;
+	position: fixed;
+	width: 300px;
+}
+
+.hoverGrapth:hover
+{
+	width: 500px; 
+}
+
+#infoGrapth
+{
+	letter-spacing: 3px;
+	bottom: 20px;
+	font-size: 20px;
+	display: block;
+	position: fixed;
+	left: 35%;
+	margin-right: auto;
+	margin-left: auto;
+}
+
+
+@media (max-width: 1100px) 
+{
+	.hoverGrapth
+	{
+		display: none;		
+	}
+	#infoGrapth
+	{
+		display: none;
+	}
+	#logo img
+	{
+		width: 150px;
+	}
+}
+
+#icons
+{
+	margin-top: 50px;
+}
+
+#mainBox a:link, #mainBox a:hover, #mainBox a:visited, #locationBox a:link, #locationBox a:hover, #locationBox a:visited
+{
+	color: #ccc;
+	text-decoration: none;
+}
+
+#mainBox
+{
+	display: block;
+	position: fixed;
+	top: 20px;
+	right: 20px;
+}
+
+#logo
+{
+	display: block;
+	position: fixed;
+	top: 20px;
+	left: : 20px;
+}
+
+#locationBox
+{
+	display: block;
+	position: fixed;
+	top: 50px;
+	right: 20px;
+}
+
+.color
+{
+	font-weight: 700;
+}
