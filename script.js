@@ -14,7 +14,7 @@ function switcher (argument) {
 	{
 		var hobbySize = hobby.length; 
 		var hobbyRandId = Math.floor(Math.random() * Math.floor(hobbySize));
-		document.getElementById('loveThink').innerHTML = hobby[hobbyRandId];
+		document.getElementById('loveThing').innerHTML = hobby[hobbyRandId];
 	}
 
 	setTimeout(switcher, Math.floor(Math.random() * Math.floor(1800))+200);
