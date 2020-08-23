@@ -47,6 +47,12 @@
       "css": "left",
       "code": 61815,
       "src": "fontawesome"
+    },
+    {
+      "uid": "720f98e7580b7987c8dc542513d1d440",
+      "css": "up",
+      "code": 61814,
+      "src": "fontawesome"
     }
   ]
 }

@@ -1,17 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@700&display=swap');
 
-
 .logoText{
 	font-family: 'Tangerine', cursive;
 }
 
-.stats{
-
+.stats1{
+	transition: all 0.4s ease-in-out;
 }
 
-.stats:hover{
-	transform: scale(4);
-	position: fixed;
-	top: 50%;
-	left: 50%;
+.stats1:hover{
+	transform: scale(4) translate(60px, -40px) rotate(5deg);
+}
+
+.stats2{
+	transition: all 0.4s ease-in-out;
+}
+
+.stats2:hover{
+	transform: scale(4) translate(-60px, -40px) rotate(-5deg);
+}
+
+.color{
+	color: #c04030;
+}
+
+#hobbies{
+	text-transform: uppercase;
+}
+
+@keyframes animate{
+
+	0%{
+		opacity: 0;
+	}
+	100%{
+		opacity: 1;
+	}
+}
+
+.animate{
+	animation: animate .5	s ease-in-out;
+}
+
+.animatedIcon{
+	transition: all .4s ease-in-out;
+	opacity: 0.75;
+}
+
+.animatedIcon:hover{
+	transform: translateY(-10px);
+	opacity: 1;
 }
