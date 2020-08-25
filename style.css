@@ -24,14 +24,14 @@
 	color: #c04030;
 }
 
-#hobbies{
-	text-transform: uppercase;
-}
-
 @keyframes animate{
 
 	0%{
 		opacity: 0;
+		transform: translateY(50%);
+	}
+	50%{
+		transform: translateY(0);
 	}
 	100%{
 		opacity: 1;
@@ -39,7 +39,7 @@
 }
 
 .animate{
-	animation: animate .5	s ease-in-out;
+	animation: animate 1s ease-in-out;
 }
 
 .animatedIcon{
@@ -50,4 +50,22 @@
 .animatedIcon:hover{
 	transform: translateY(-10px);
 	opacity: 1;
+}
+
+.floatingIcon{
+	font-size: 64px;
+	text-decoration: none;
+	position: fixed;
+	bottom: 25px;
+	display: block;
+	padding: 5px;
+	border-radius: 10px;
+}
+
+#loginIcon{
+	left: 15px;
+}
+
+#feedbackIcon{
+	right: 15px;
 }
