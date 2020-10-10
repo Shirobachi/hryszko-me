@@ -3,7 +3,6 @@
 .logoText {
   font-family: 'Tangerine', cursive;
 }
-//it's beginnig to looks a lot like christmas
 .stats1 {
   -webkit-transition: all 0.4s ease-in-out;
   -ms-transition: all 0.4s ease-in-out;
@@ -54,7 +53,7 @@
   transition: all .4s ease-in-out;
   opacity: 0.75;
 }
-
+//it's beginnig to looks a lot like christmas
 .animatedIcon:hover {
   transform: translateY(-10px);
   opacity: 1;
