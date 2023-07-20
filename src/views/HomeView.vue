@@ -1,3 +1,44 @@
+<script setup>
+  import anime from 'animejs'
+  import { onMounted } from 'vue'
+
+  function randomInt (min, max) {
+    return Math.floor(Math.random() * (max - min + 1) + min)
+  }
+
+  function randomHex () {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16)
+  }
+
+  onMounted(() => {
+    anime({
+      targets: 'path',
+      keyframes: [
+        { strokeDashoffset: [anime.setDashoffset, 0] },
+        { fill: randomHex() },
+        { strokeDashoffset: [0, anime.setDashoffset] },
+        { fill: randomHex() },
+      ],
+
+      strokeDashoffset: {
+        value: [anime.setDashoffset, 0],
+        easing: 'easeInOutQuad',
+      },
+      fill: {
+        value: randomHex(),
+        easing: 'easeInOutQuad',
+      },
+
+      // strokeDashoffset: [offset, 0],
+      duration: anime.random(1, 3) * Math.pow(10, 3),
+      delay: anime.random(0, 0),
+      loop: true,
+      direction: 'alternate',
+      easing: 'easeInOutSine',
+    })
+  })
+</script>
+
 <template>
   <main>
     <p class="text-8xl text-center m-10">
