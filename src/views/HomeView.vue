@@ -1,9 +1,34 @@
-<script setup>
-  import TheWelcome from '../components/TheWelcome.vue'
-</script>
-
 <template>
   <main>
-    <TheWelcome />
+    <p class="text-8xl text-center m-10">
+      <svg width="720.5" height="85" viewBox="0 0 720.5 85" xmlns="http://www.w3.org/2000/svg">
+        <g
+          id="svgGroup"
+          stroke-linecap="round"
+          fill-rule="evenodd"
+          font-size="9pt"
+          stroke="#000"
+          stroke-width="0.25mm"
+          fill="none"
+          class="stroke-text path"
+          style="stroke-width: 0.25mm; fill: none">
+          <path
+            d="M 85 71 L 85 15 L 155 15 L 165 25 L 165 71 L 156 71 L 156 23 L 129.5 23 L 129.5 71 L 120.5 71 L 120.5 23 L 94 23 L 94 71 L 85 71 Z M 44 71 L 1 71 L 1 63 L 43 63 L 43 40.7 L 0 37.4 L 0 9 L 8 1 L 51 1 L 51 9 L 9 9 L 9 30.3 L 52 33.6 L 52 63 L 44 71 Z M 334 71 L 325 71 L 325 1 L 334 1 L 334 31 L 371 31 L 371 1 L 380 1 L 380 71 L 371 71 L 371 39 L 334 39 L 334 71 Z M 538.8 71 L 498.5 71 L 498.5 63 L 538.5 63 L 538.5 46.5 L 498.5 46.5 L 498.5 24 L 507.5 15 L 547.5 15 L 547.5 23 L 507.5 23 L 507.5 38.5 L 547.5 38.5 L 547.5 62.3 L 538.8 71 Z M 469.5 85 L 437.1 85 L 437.1 77 L 463.2 77 L 467.5 63 L 450.4 63 L 434.1 15 L 443.2 15 L 456.8 55 L 469.9 55 L 482.8 15 L 491.9 15 L 469.5 85 Z M 621 71 L 612 71 L 612 1 L 621 1 L 621 37.9 L 638.8 37.9 L 653.8 15 L 664.1 15 L 646.5 40.8 L 665 71 L 654.8 71 L 639.7 45.9 L 621 45.9 L 621 71 Z M 246 71 L 237 71 L 237 15 L 278 15 L 287 24 L 287 71 L 278 71 L 278 23 L 246 23 L 246 71 Z M 603 71 L 556 71 L 556 65 L 591.3 23 L 556.7 23 L 556.7 15 L 602.5 15 L 602.5 21 L 567.2 63 L 603 63 L 603 71 Z M 185.5 71 L 176.5 62 L 176.5 24 L 185.5 15 L 216.5 15 L 225.5 24 L 225.5 62 L 216.5 71 L 185.5 71 Z M 680.5 71 L 671.5 62 L 671.5 24 L 680.5 15 L 711.5 15 L 720.5 24 L 720.5 62 L 711.5 71 L 680.5 71 Z M 401 71 L 392 71 L 392 24 L 401 15 L 431 15 L 431 23 L 401 23 L 401 71 Z M 185.5 23 L 185.5 63 L 216.5 63 L 216.5 23 L 185.5 23 Z M 680.5 23 L 680.5 63 L 711.5 63 L 711.5 23 L 680.5 23 Z M 73 71 L 64 71 L 64 15 L 73 15 L 73 71 Z M 73 8 L 64 8 L 64 0 L 73 0 L 73 8 Z"
+            vector-effect="non-scaling-stroke" />
+        </g>
+      </svg>
+    </p>
   </main>
 </template>
+
+<style>
+  path {
+    stroke-dasharray: 10;
+    animation: dash 5s linear;
+  }
+  @keyframes dash {
+    to {
+      stroke-dashoffset: 1000;
+    }
+  }
+</style>
