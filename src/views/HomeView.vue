@@ -2,11 +2,11 @@
   import anime from 'animejs'
   import { onMounted } from 'vue'
 
-  function randomInt (min, max) {
+  function randomInt(min, max) {
     return Math.floor(Math.random() * (max - min + 1) + min)
   }
 
-  function randomHex () {
+  function randomHex() {
     return '#' + Math.floor(Math.random() * 16777215).toString(16)
   }
 

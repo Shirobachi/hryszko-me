@@ -14,17 +14,17 @@
       </div>
 
       <!-- menu: https://www.section.io/engineering-education/creating-a-responsive-navigation-bar-using-tailwind-css-and-javascript/ -->
-        <!-- Desktop menu -->
-        <div class="hidden md:flex items-center space-x-1">
-          <div v-for="route in $router.options.routes" :key="route.path">
-            <router-link
-              :to="route.path"
-              active-class="underline text-primary"
-              class="hover:text-primary py-4 px-2 font-semibold transition duration-300">
-              {{ route.name }}
-            </router-link>
-          </div>
+      <!-- Desktop menu -->
+      <div class="hidden md:flex items-center space-x-1">
+        <div v-for="route in $router.options.routes" :key="route.path">
+          <router-link
+            :to="route.path"
+            active-class="underline text-primary"
+            class="hover:text-primary py-4 px-2 font-semibold transition duration-300">
+            {{ route.name }}
+          </router-link>
         </div>
+      </div>
     </div>
   </div>
 
