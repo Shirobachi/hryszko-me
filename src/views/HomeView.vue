@@ -20,15 +20,3 @@
     </p>
   </main>
 </template>
-
-<style>
-  path {
-    stroke-dasharray: 10;
-    animation: dash 5s linear;
-  }
-  @keyframes dash {
-    to {
-      stroke-dashoffset: 1000;
-    }
-  }
-</style>
