@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import HomeView from '../views/HomeView.vue'
+import DebugView from '../views/DebugView.vue'
 
 const router = createRouter({
   history: createWebHistory(import.meta.env.BASE_URL),
@@ -10,9 +11,9 @@ const router = createRouter({
       component: HomeView,
     },
     {
-      path: '/asdas',
-      name: 'homeasd',
-      component: HomeView,
+      path: '/debug',
+      name: 'Debugging',
+      component: DebugView,
     },
   ],
 })
