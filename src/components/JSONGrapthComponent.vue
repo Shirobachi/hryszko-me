@@ -98,6 +98,7 @@
 
   let delayed
   const options = {
+    tension: 11,
     responsive: true,
     maintainAspectRatio: false,
     animation: {
