@@ -1,6 +1,6 @@
 <script setup>
-  import { PolarArea } from 'vue-chartjs'
-  import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, RadialLinearScale } from 'chart.js'
+  // import { PolarArea } from 'vue-chartjs'
+  // import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, RadialLinearScale } from 'chart.js'
   // import axios from 'axios'
   // import { onMounted } from 'vue'
   // import { ref } from 'vue'
@@ -20,11 +20,30 @@
   // } from 'chart.js'
   // import { computed } from 'vue'
 
+  import { Chart as ChartJS, RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend } from 'chart.js'
+  import { Radar } from 'vue-chartjs'
+
+  ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend)
+  ChartJS.defaults.color = '#fff'
+
   // ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale, PointElement)
   // ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend)
-  ChartJS.register(Title, Tooltip, Legend, ArcElement, RadialLinearScale)
+  // ChartJS.register(Title, Tooltip, Legend, ArcElement, RadialLinearScale)
   const randomHex = () => {
     return '#' + Math.floor(Math.random() * 16777215).toString(16)
+  }
+  const randomRbga = alpha => {
+    return (
+      'rgba(' +
+      Math.floor(Math.random() * 255) +
+      ',' +
+      Math.floor(Math.random() * 255) +
+      ',' +
+      Math.floor(Math.random() * 255) +
+      ',' +
+      alpha +
+      ')'
+    )
   }
   // const gradient =
 
@@ -48,19 +67,36 @@
 
   // LINE
   const data = {
-    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "YAML", "JSON", "JavaScript", "Markdown", "Other", "Python", "Vue.js"],
     datasets: [
       {
         label: 'Data One',
         fill: true,
-        backgroundColor: [randomHex(), randomHex(), randomHex(), randomHex(), randomHex(), randomHex(), randomHex()],
-        pointBackgroundColor: 'white',
-        data: [40, 39, 10, 40, 39, 80, 40],
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        backgroundColor: 'rgba(255, 99, 132, 0.2)',
+        borderColor: 'rgb(255, 99, 132)',
+        pointBackgroundColor: 'rgb(255, 99, 132)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgb(255, 99, 132)',
+
+        data: [40, 39, 100, 40, 39, 80, 40],
       },
+      {
+    label: 'My Second Dataset',
+    data: [0,0,0,0,0,0,0,28, 48, 40, 19, 96, 27, 100],
+    fill: true,
+    backgroundColor: 'rgba(54, 162, 235, 0.2)',
+    borderColor: 'rgb(54, 162, 235)',
+    pointBackgroundColor: 'rgb(54, 162, 235)',
+    pointBorderColor: '#fff',
+    pointHoverBackgroundColor: '#fff',
+    pointHoverBorderColor: 'rgb(54, 162, 235)'
+  }
     ],
   }
 
-  let delayed;
+  let delayed
   const options = {
     responsive: true,
     maintainAspectRatio: false,
@@ -111,6 +147,7 @@
   <main>
     <!-- <Bar :data="data" :options="options" /> -->
     <!-- <Line style="height: 70vh" :data="data" :options="options" /> -->
-    <PolarArea style="height: 70vh" :data="data" :options="options" />
+    <!-- <PolarArea style="height: 70vh" :data="data" :options="options" /> -->
+    <Radar style="height: 70vh" :data="data" :options="options" />
   </main>
 </template>
