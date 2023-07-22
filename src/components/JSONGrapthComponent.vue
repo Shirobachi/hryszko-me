@@ -1,26 +1,31 @@
 <script setup>
-  import axios from 'axios'
-  import { onMounted } from 'vue'
-  import { ref } from 'vue'
-  import { Bar } from 'vue-chartjs'
-  import { Line } from 'vue-chartjs'
-  import {
-    Chart as ChartJS,
-    PointElement,
-    Title,
-    Tooltip,
-    Filler,
-    Legend,
-    LineElement,
-    BarElement,
-    CategoryScale,
-    LinearScale,
-  } from 'chart.js'
-  import { computed } from 'vue'
+  import { PolarArea } from 'vue-chartjs'
+  import { Chart as ChartJS, Title, Tooltip, Legend, ArcElement, RadialLinearScale } from 'chart.js'
+  // import axios from 'axios'
+  // import { onMounted } from 'vue'
+  // import { ref } from 'vue'
+  // import { Bar } from 'vue-chartjs'
+  // import { Line } from 'vue-chartjs'
+  // import {
+  //   Chart as ChartJS,
+  //   PointElement,
+  //   Title,
+  //   Tooltip,
+  //   Filler,
+  //   Legend,
+  //   LineElement,
+  //   BarElement,
+  //   CategoryScale,
+  //   LinearScale,
+  // } from 'chart.js'
+  // import { computed } from 'vue'
 
   // ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale, PointElement)
-  ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend)
-
+  // ChartJS.register(CategoryScale, LinearScale, PointElement, LineElement, Title, Tooltip, Filler, Legend)
+  ChartJS.register(Title, Tooltip, Legend, ArcElement, RadialLinearScale)
+  const randomHex = () => {
+    return '#' + Math.floor(Math.random() * 16777215).toString(16)
+  }
   // const gradient =
 
   // const data = ref({
@@ -48,13 +53,7 @@
       {
         label: 'Data One',
         fill: true,
-        backgroundColor: ctx => {
-          const canvas = ctx.chart.ctx
-          const gradient = canvas.createLinearGradient(0, 0, 0, 400)
-          gradient.addColorStop(0, 'rgba(58,123,213,1)')
-          gradient.addColorStop(1, 'rgba(0,210,255,0.3)')
-          return gradient
-        },
+        backgroundColor: [randomHex(), randomHex(), randomHex(), randomHex(), randomHex(), randomHex(), randomHex()],
         pointBackgroundColor: 'white',
         data: [40, 39, 10, 40, 39, 80, 40],
       },
@@ -98,6 +97,7 @@
 <template>
   <main>
     <!-- <Bar :data="data" :options="options" /> -->
-    <Line style="height: 70vh" :data="data" :options="options" />
+    <!-- <Line style="height: 70vh" :data="data" :options="options" /> -->
+    <PolarArea style="height: 70vh" :data="data" :options="options" />
   </main>
 </template>
