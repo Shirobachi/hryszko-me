@@ -20,10 +20,19 @@
   // } from 'chart.js'
   // import { computed } from 'vue'
 
-  import { Chart as ChartJS, RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend } from 'chart.js'
+  import {
+    Chart as ChartJS,
+    RadialLinearScale,
+    PointElement,
+    LineElement,
+    Filler,
+    Tooltip,
+    Legend,
+    LinearScale,
+  } from 'chart.js'
   import { Radar } from 'vue-chartjs'
 
-  ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend)
+  ChartJS.register(RadialLinearScale, PointElement, LineElement, Filler, Tooltip, Legend, LinearScale)
   ChartJS.defaults.color = '#fff'
 
   // ChartJS.register(Title, Tooltip, BarElement, CategoryScale, LinearScale, PointElement)
@@ -67,7 +76,22 @@
 
   // LINE
   const data = {
-    labels: ["Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun", "YAML", "JSON", "JavaScript", "Markdown", "Other", "Python", "Vue.js"],
+    labels: [
+      'Mon',
+      'Tue',
+      'Wed',
+      'Thu',
+      'Fri',
+      'Sat',
+      'Sun',
+      'YAML',
+      'JSON',
+      'JavaScript',
+      'Markdown',
+      'Other',
+      'Python',
+      'Vue.js',
+    ],
     datasets: [
       {
         label: 'Data One',
@@ -80,25 +104,25 @@
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgb(255, 99, 132)',
 
-        data: [0,40, 39, 100, 40, 39, 80, 0],
+        data: [0, 40, 39, 100, 40, 39, 80, 0],
       },
       {
-    label: 'My Second Dataset',
-    data: [0,0,0,0,0,0,0,28, 48, 40, 19, 96, 27, 40, 0],
-    fill: true,
-    backgroundColor: 'rgba(54, 162, 235, 0.2)',
-    borderColor: 'rgb(54, 162, 235)',
-    pointBackgroundColor: 'rgb(54, 162, 235)',
-    pointBorderColor: '#fff',
-    pointHoverBackgroundColor: '#fff',
-    pointHoverBorderColor: 'rgb(54, 162, 235)'
-  }
+        label: 'My Second Dataset',
+        data: [0, 0, 0, 0, 0, 0, 0, 28, 48, 40, 19, 96, 27, 40, 0],
+        fill: true,
+        backgroundColor: 'rgba(54, 162, 235, 0.2)',
+        borderColor: 'rgb(54, 162, 235)',
+        pointBackgroundColor: 'rgb(54, 162, 235)',
+        pointBorderColor: '#fff',
+        pointHoverBackgroundColor: '#fff',
+        pointHoverBorderColor: 'rgb(54, 162, 235)',
+      },
     ],
   }
 
   let delayed
   const options = {
-    tension: .6,
+    tension: 0.6,
     responsive: true,
     maintainAspectRatio: false,
     animation: {
@@ -112,6 +136,21 @@
         }
         return delay
       },
+    },
+    // scales: {
+    //   gridLines: {
+    //     grid: {
+    //       color: '#fff'
+    //     }
+    //   }
+    // }
+    scales: {
+      r: {
+        grid: { color: randomHex(), },
+        angleLines: { color: randomHex(), },
+        pointLabels: { color: randomHex(), },
+        ticks: { color: randomHex(), },
+      }
     },
   }
 
