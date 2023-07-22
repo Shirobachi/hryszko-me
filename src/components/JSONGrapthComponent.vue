@@ -80,11 +80,11 @@
         pointHoverBackgroundColor: '#fff',
         pointHoverBorderColor: 'rgb(255, 99, 132)',
 
-        data: [40, 39, 100, 40, 39, 80, 40],
+        data: [0,40, 39, 100, 40, 39, 80, 0],
       },
       {
     label: 'My Second Dataset',
-    data: [0,0,0,0,0,0,0,28, 48, 40, 19, 96, 27, 100],
+    data: [0,0,0,0,0,0,0,28, 48, 40, 19, 96, 27, 40, 0],
     fill: true,
     backgroundColor: 'rgba(54, 162, 235, 0.2)',
     borderColor: 'rgb(54, 162, 235)',
@@ -98,7 +98,7 @@
 
   let delayed
   const options = {
-    tension: 11,
+    tension: .6,
     responsive: true,
     maintainAspectRatio: false,
     animation: {
