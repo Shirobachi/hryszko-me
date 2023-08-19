@@ -45,3 +45,20 @@ function switcher (type){
 		setTimeout(switcher, Math.floor(Math.random() * Math.floor(1500))+4000, "hobby");
 	}
 }
+
+fetch('https://wakatime.com/share/@b74ba3c5-2883-43ca-9833-799f8a50840a/067db09f-75f9-4677-8993-19882ce0af9c.json')
+    .then(response => response.json())
+    .then(data => {
+        var ctx = document.getElementById('myChart').getContext('2d');
+        var myChart = new Chart(ctx, {
+            type: 'bar',
+            data: data,
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true
+                    }
+                }
+            }
+        });
+    });
