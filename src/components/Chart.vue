@@ -53,7 +53,7 @@
 
 <style scoped>
 .responsive-chart {
-  width: 100%;
+  width: 70%;
 }
 
 @media screen and (max-width: 600px) {
