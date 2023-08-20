@@ -45,7 +45,7 @@
 
         this.loaded = true
       } catch (e) {
-        // Reverted changes
+        console.error(e)
       }
     },
   }
