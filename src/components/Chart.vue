@@ -45,11 +45,11 @@
 
         this.loaded = true
       } catch (e) {
-        <template>
-          <div class="container">
-            <Bar v-if="loaded" :data="chartData" class="w-70" />
-          </div>
-        </template>
+        // Reverted changes
+      }
+    },
+  }
+</script>
         
         <style scoped>
         </style>
