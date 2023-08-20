@@ -45,26 +45,11 @@
 
         this.loaded = true
       } catch (e) {
-        console.error(e)
-      }
-    },
-  }
-</script>
-
-<style scoped>
-.responsive-chart {
-  width: 70%;
-}
-
-@media screen and (max-width: 600px) {
-  .responsive-chart {
-    width: 100%;
-  }
-}
-
-@media screen and (min-width: 601px) {
-  .responsive-chart {
-    width: 100%;
-  }
-}
-</style>
+        <template>
+          <div class="container">
+            <Bar v-if="loaded" :data="chartData" class="w-70" />
+          </div>
+        </template>
+        
+        <style scoped>
+        </style>
