@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <Bar v-if="loaded" :data="chartData" />
+    <Bar v-if="loaded" :data="chartData" class="responsive-chart" />
   </div>
 </template>
 
@@ -50,3 +50,21 @@
     },
   }
 </script>
+
+<style scoped>
+.responsive-chart {
+  width: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .responsive-chart {
+    width: 100%;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .responsive-chart {
+    width: 100%;
+  }
+}
+</style>
